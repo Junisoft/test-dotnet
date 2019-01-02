@@ -1,0 +1,40 @@
+﻿@model AppWebCore3.Models.Empleados
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h2>Add</h2>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Add">
+    <table cellpadding="2" cellspacing="2">
+        <tr>
+            <td>Nombre</td>
+            <td>
+                <input asp-for="nombre_emp" />
+            </td>
+        </tr>
+        <tr>
+            <td>Apellidos</td>
+            <td>
+                <input asp-for="apellidos_emp" />
+            </td>
+        </tr>
+        <tr>
+            <td>Salario</td>
+            <td>
+                <input asp-for="salario_emp" />
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <input type="submit" value="Guardar" />
+            </td>
+        </tr>
+
+
+    </table>
+
+</form>
+

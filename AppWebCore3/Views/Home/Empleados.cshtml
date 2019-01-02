@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Empleados";
+}
+
+<h2>Empleados</h2>
+
+<a asp-controller="Home" asp-action="Add">Agregar nuevo empleado</a>
+<br />
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Salario</th>
+    </tr>
+        @foreach(var emp in ViewBag.Empleados)
+         {
+            <tr>
+                <td>@emp.id_emp</td>
+                <td>@emp.nombre_emp</td>
+                <td>@emp.apellidos_emp</td>
+                <td>@emp.salario_emp</td>   
+                <td>Editar / Eliminar</td>
+            </tr>
+         }
+
+</table>
+
